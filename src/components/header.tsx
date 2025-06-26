@@ -1,10 +1,9 @@
 import Link from "next/link";
-import { headerStyle } from "@/functions/styles";
 import Image from "next/image";
 import { use } from "react";
 
 export default async function Header() {
-  const user = true;
+  const user = false;
 
   return (
     <header
