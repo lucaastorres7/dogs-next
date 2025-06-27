@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
+import userGet from "@/actions/user-get";
 
 export default async function Header() {
-  const user = false;
+  const { data } = await userGet();
 
   return (
     <header
@@ -18,19 +19,19 @@ export default async function Header() {
             priority
           />
         </Link>
-        {user ? (
+        {data ? (
           <Link
             className="text-[#333] flex items-center after:inline-block after:w-[14px] after:h-[17px] after:bg-[url(/assets/usuario.svg)] after:bg-no-repeat after:bg-center after:ml-[0.5rem] after:relative after:top-[-1px]"
             href="/conta"
           >
-            DOGS
+            {data.username}
           </Link>
         ) : (
           <Link
             className="text-[#333] flex items-center after:inline-block after:w-[14px] after:h-[17px] after:bg-[url(/assets/usuario.svg)] after:bg-no-repeat after:bg-center after:ml-[0.5rem] after:relative after:top-[-1px]"
             href="/login"
           >
-            Login/Criar
+            Login / Criar
           </Link>
         )}
       </nav>
