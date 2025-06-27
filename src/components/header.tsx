@@ -1,13 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { use } from "react";
 
 export default async function Header() {
   const user = false;
 
   return (
     <header
-      className={`shadow-[0_1px_1px_rgba(0,0,0,.1)] fixed w-full z-100 bg-white top-0`}
+      className={`shadow-[0_1px_1px_rgba(0,0,0,.1)] fixed w-full z-50 bg-white top-0`}
     >
       <nav className={`container flex justify-between items-center h-[4rem]`}>
         <Link className="py-[0.5rem]" href="/">
