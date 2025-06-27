@@ -1,8 +1,23 @@
-export default async function ResetPage() {
+import LoginResetForm from "@/components/login/login-reset-form";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Resetar a senha | Dogs",
+  description: "Resete sua senha.",
+};
+
+type ResetPageProps = {
+  searchParams: {
+    key: string;
+    login: string;
+  };
+};
+
+export default async function ResetPage({ searchParams }: ResetPageProps) {
   return (
-    <div>
-      <h1>Redefinir Senha</h1>
-      <p>Esta é a página para redefinir sua senha.</p>
+    <div className="animeLeft">
+      <h1 className="title">Redefinir Senha</h1>
+      <LoginResetForm keyToken={searchParams.key} login={searchParams.login} />
     </div>
   );
 }
