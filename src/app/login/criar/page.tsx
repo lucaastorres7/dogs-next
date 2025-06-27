@@ -1,8 +1,16 @@
+import LoginCreateForm from "@/components/login/login-create-form";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Crie sua conta | Dogs",
+  description: "Crie sua conta no site dogs.",
+};
+
 export default async function CreatePage() {
   return (
-    <div>
-      <h1>Criar Conta</h1>
-      <p>Esta é a página para criar uma nova conta.</p>
+    <div className="animeLeft">
+      <h1 className="title">Cadastre-se</h1>
+      <LoginCreateForm />
     </div>
   );
 }
