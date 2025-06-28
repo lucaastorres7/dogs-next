@@ -17,7 +17,6 @@ export const metadata: Metadata = {
 
 export default async function StatsPage() {
   const { data } = await statsGet();
-  console.log(data);
 
   if (!data) return null;
   return (
