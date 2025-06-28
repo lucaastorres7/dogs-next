@@ -1,15 +1,35 @@
-"use client";
-
-import { useUser } from "@/context/user-context";
+import photosGet from "@/actions/photos-get";
+import userGet from "@/actions/user-get";
+import Feed from "@/components/feed/feed";
+import { Metadata } from "next";
+import Link from "next/link";
 import React from "react";
 
-export default function AccountPage() {
-  const { user } = useUser();
+export const metadata: Metadata = {
+  title: "Minha Conta",
+  description: "Página de conta do usuário",
+};
+
+export default async function AccountPage() {
+  const { data: user } = await userGet();
+  const { data } = await photosGet({ user: user?.username });
 
   return (
     <div>
-      <h1>Conta {user?.name}</h1>
-      <p>Esta é a página de conta.</p>
+      {data?.length ? (
+        <Feed photos={data} />
+      ) : (
+        <div>
+          <p className="text-[#444] text-xl mb-4">Nenhuma foto encontrada.</p>
+
+          <Link
+            href={`/conta/postar`}
+            className="botao inline-block text-center"
+          >
+            Postar foto
+          </Link>
+        </div>
+      )}
     </div>
   );
 }
