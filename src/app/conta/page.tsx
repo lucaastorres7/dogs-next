@@ -17,7 +17,7 @@ export default async function AccountPage() {
   return (
     <div>
       {data?.length ? (
-        <Feed photos={data} />
+        <Feed photos={data} user={user?.username} />
       ) : (
         <div>
           <p className="text-[#444] text-xl mb-4">Nenhuma foto encontrada.</p>

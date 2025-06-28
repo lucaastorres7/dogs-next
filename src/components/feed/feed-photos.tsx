@@ -5,8 +5,8 @@ import Link from "next/link";
 export default function FeedPhotos({ photos }: { photos: Photo[] }) {
   return (
     <ul className="grid grid-cols-3 gap-[1rem] mb-[1rem] justify-items-center max-sm:grid-cols-2 animeLeft [&>li:nth-child(2)]:col-start-2 [&>li:nth-child(2)]:col-end-4 [&>li:nth-child(2)]:row-span-2 max-sm:[&>li:nth-child(2)]:col-auto max-sm:[&>li:nth-child(2)]:row-auto">
-      {photos.map((photo, i) => (
-        <li key={photo.id + i}>
+      {photos.map((photo) => (
+        <li key={photo.id}>
           <Link
             href={`/foto/${photo.id}`}
             scroll={false}
