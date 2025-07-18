@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🐾 Dogs
+## 📖 Sobre o Projeto
+Dogs é uma rede social com o objetivo de criar um espaço onde os amantes de cachorros possam postar e interagir com fotos de seus pets. A aplicação foi construída com foco em performance, escalabilidade e uma ótima experiência de desenvolvimento.
 
-## Getting Started
+## ✨ Funcionalidades
+- [x] **Feed de Fotos**: Visualize as postagens mais recentes.
+- [x] **Postagem de Fotos**: Usuários podem enviar fotos dos seus cães.
+- [x] **Páginas de Perfil**: Veja todas as postagens de um usuário específico.
+- [x] **Comentários**: Interaja com as publicações.
 
-First, run the development server:
+## 🛠️ Tecnologias Utilizadas
+- **NextJS**: Framework React para renderização no lado do servidor (SSR) e geração de sites estáticos (SSG), garantindo performance.
+- **TypeScript**: Superset do JavaScript que adiciona tipagem, aumentando a robustez e a manutenibilidade do código.
+- **Tailwind**: Biblioteca para facilitar a estilização por meio de classes CSS já criadas.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Como Executar o Projeto
+1.  **Clone o repositório:**
+    ```bash
+    git clone https://github.com/lucaastorres7/dogs-next.git
+    cd dogs-next
+    ```
+2. **Instale as dependências**:
+   ```bash
+   npm install
+   ```
+3. **Execute o servidor de desenvolvimento**:
+   ```bash
+   npm run dev 
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 👤 Autor
+| <img src="https://avatars.githubusercontent.com/u/151575079?s=400&u=96fac0907f9100c143dc9f46242cacdf17af240f&v=4" alt="Lucas Torres" width="150" height="150"> |
+| --------------------------------------------------------------------------------------------------------------- |
+| [Lucas Torres](https://github.com/lucaastorres7)                                                                |
